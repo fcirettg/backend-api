@@ -29,11 +29,11 @@ public class ServicioController {
     }
 
     @GetMapping("/servicios")
-    List<Servicio> all(Optional<Long> id,
+    List<Servicio> all(Optional<Long> folio,
                        Optional<Integer> codMaterial,
                        Optional<Long> idRecolector,
                        Optional<Long> idSolicitud) {
-        return service.getServicioList(id, codMaterial, idRecolector, idSolicitud);
+        return service.getServicioList(folio, codMaterial, idRecolector, idSolicitud);
     }
 
     @PostMapping("/servicios")

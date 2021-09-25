@@ -27,6 +27,7 @@ public class ServicioService {
                                           Optional<Long> idSolicitud) {
         List<Servicio> servicioList = repository.getAll();
 
+
         if(folio.isPresent()) {
             servicioList = servicioList.stream()
                     .filter(servicio -> Objects.equals(servicio.getSolicitud().getFolio(), folio.get()))
