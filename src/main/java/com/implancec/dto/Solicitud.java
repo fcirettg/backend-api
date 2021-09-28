@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Solicitud {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long folio;
 
@@ -19,7 +20,10 @@ public class Solicitud {
     private OffsetDateTime fechaServ;
 
     private int estado;
-
+    private int cantidad_alu;
+    private int cantidad_papel;
+    private int cantidad_pet;
+    private int cantidad_vidrio;
     @ManyToOne
     @JoinColumn(name = "id_afiliado")
     private Afiliado afiliado;
@@ -27,10 +31,14 @@ public class Solicitud {
     public Solicitud() {
     }
 
-    public Solicitud(OffsetDateTime fechaRec, OffsetDateTime fechaServ, int estado, Afiliado afiliado) {
+    public Solicitud(OffsetDateTime fechaRec, OffsetDateTime fechaServ, int estado, int cantidad_alu, int cantidad_papel, int cantidad_pet, int cantidad_vidrio, Afiliado afiliado) {
         this.fechaRec = fechaRec;
         this.fechaServ = fechaServ;
         this.estado = estado;
+        this.cantidad_alu = cantidad_alu;
+        this.cantidad_papel = cantidad_papel;
+        this.cantidad_pet = cantidad_pet;
+        this.cantidad_vidrio = cantidad_vidrio;
         this.afiliado = afiliado;
     }
 
@@ -74,4 +82,16 @@ public class Solicitud {
         this.estado = estado;
     }
 
+    public int getCantidad_alu() {
+        return cantidad_alu;
+    }
+    public int getCantidad_papel() {
+        return cantidad_papel;
+    }
+    public int getCantidad_pet() {
+        return cantidad_pet;
+    }
+    public int getCantidad_vidrio() {
+        return cantidad_vidrio;
+    }
 }
