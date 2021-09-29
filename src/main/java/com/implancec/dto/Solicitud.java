@@ -94,4 +94,16 @@ public class Solicitud {
     public int getCantidad_vidrio() {
         return cantidad_vidrio;
     }
+    public void setCantidad_alu(int cantidad_alu) {
+        this.cantidad_alu = cantidad_alu;
+    }
+    public void setCantidad_papel(int cantidad_papel) {
+        this.cantidad_papel = cantidad_papel;
+    }
+    public void setCantidad_pet(int cantidad_pet) {
+        this.cantidad_pet = cantidad_pet;
+    }
+    public void setCantidad_vidrio(int cantidad_vidrio) {
+        this.cantidad_vidrio = cantidad_vidrio;
+    }
 }
